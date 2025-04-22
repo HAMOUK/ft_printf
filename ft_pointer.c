@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugolongin <hlongin@student.s19.be>        +#+  +:+       +#+        */
+/*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:21:52 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/15 01:36:30 by hugolongin       ###   ########.fr       */
+/*   Updated: 2025/04/22 17:01:42 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <stdarg.h>
 #include "../libft/libft.h"
 
 
 int	ft_ptrlen(unsigned long n)
 {
-	int	len;
+	int     len;
 
 	len = 1;
 	while (n >= 16)

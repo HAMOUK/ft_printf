@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 00:04:29 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/22 17:27:34 by hlongin          ###   ########.fr       */
+/*   Created: 2025/04/14 17:50:58 by hlongin           #+#    #+#             */
+/*   Updated: 2025/04/22 17:18:18 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "ft_printf.h"
-#include <stdarg.h>
 
-int     ft_string(va_list *args)
+void	ft_putchar_fd(char c, int fd)
 {
-    char    *str;
-
-    str = va_arg(*args, char *);
-    if (!str)
-    {
-        ft_putstr_fd("(null)", 1);
-        return (6);
-    }
-    ft_putstr_fd(str, 1);
-    return (ft_strlen(str));
+	write(fd, &c, 1);
 }

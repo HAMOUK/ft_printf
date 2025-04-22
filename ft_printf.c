@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugolongin <hlongin@student.s19.be>        +#+  +:+       +#+        */
+/*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:04:15 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/15 01:37:19 by hugolongin       ###   ########.fr       */
+/*   Updated: 2025/04/22 17:21:01 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdarg.h>
-#include "printf.h"
-#include "../libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -67,6 +65,7 @@ int	ft_printf(const char *format, ...)
 #include <stdio.h>
 #include "printf.h"
 
+/*
 int	main(void)
 {
 	int		nb = -42;
@@ -103,4 +102,4 @@ int	main(void)
 	printf("9. Percent sign: [%%]\n");
 
 	return (0);
-}
+}*/

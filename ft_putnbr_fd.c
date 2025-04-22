@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 00:04:29 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/22 17:27:34 by hlongin          ###   ########.fr       */
+/*   Created: 2025/04/14 17:51:03 by hlongin           #+#    #+#             */
+/*   Updated: 2025/04/22 17:19:44 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdarg.h>
+#include <unistd.h>
+#include  "ft_printf.h"
 
-int     ft_string(va_list *args)
+void	ft_putnbr_fd(int n, int fd)
 {
-    char    *str;
+	char	c;
 
-    str = va_arg(*args, char *);
-    if (!str)
-    {
-        ft_putstr_fd("(null)", 1);
-        return (6);
-    }
-    ft_putstr_fd(str, 1);
-    return (ft_strlen(str));
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		n = n * -1;
+		write(fd, "-", 1);
+	}
+	if (n > 9)
+		ft_putnbr_fd((n / 10), fd);
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
 }
+
+

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hexalen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugolongin <hlongin@student.s19.be>        +#+  +:+       +#+        */
+/*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 01:38:21 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/15 01:39:29 by hugolongin       ###   ########.fr       */
+/*   Updated: 2025/04/22 17:01:29 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_hexalen(unsigned int n)
 {
-	int	count;
+	int		count;
 
 	count = 1;
 	while (n >= 16)

@@ -1,4 +1,4 @@
-NAME = ft_printf
+NAME = libftprintf.a
 
 LIBFT_DIR = ../libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -11,7 +11,11 @@ SRC = ft_printf.c \
 	ft_hexamin.c \
 	ft_hexamaj.c \
 	ft_hexalen.c \
-	ft_pointer.c
+	ft_pointer.c \
+	ft_putchar_fd.c \
+	ft_putnbr_fd.c \
+	ft_putstr_fd.c \
+	ft_strlen.c 
 
 OBJ = $(SRC:.c=.o)
 
@@ -21,7 +25,7 @@ CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_DIR)/includes
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
+	ar rcs $(NAME) $(OBJ)
 
 $(LIBFT):
 	make -C $(LIBFT_DIR)

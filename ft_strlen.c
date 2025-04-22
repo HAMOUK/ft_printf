@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 00:04:29 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/22 17:27:34 by hlongin          ###   ########.fr       */
+/*   Created: 2025/04/14 17:51:43 by hlongin           #+#    #+#             */
+/*   Updated: 2025/04/22 17:48:24 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
 
-int     ft_string(va_list *args)
+size_t 	ft_strlen(const char *str)
 {
-    char    *str;
+	size_t	i;
 
-    str = va_arg(*args, char *);
-    if (!str)
-    {
-        ft_putstr_fd("(null)", 1);
-        return (6);
-    }
-    ft_putstr_fd(str, 1);
-    return (ft_strlen(str));
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Norminette (tout le projet)",
+        "type": "shell",
+        "command": "/Users/hugolongin/Library/Python/3.9/bin/norminette .",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Norminette (fichier actuel)",
+        "type": "shell",
+        "command": "/Users/hugolongin/Library/Python/3.9/bin/norminette",
+        "args": [
+          "${file}"
+        ],
+        "group": "none",
+        "problemMatcher": []
+      }
+    ]
+  }

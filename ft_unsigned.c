@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugolongin <hlongin@student.s19.be>        +#+  +:+       +#+        */
+/*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:17:46 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/15 01:37:50 by hugolongin       ###   ########.fr       */
+/*   Updated: 2025/04/22 17:22:16 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <stdarg.h>
-#include "../libft/libft.h"
 
 void    ft_put_unsigned(unsigned int un)
 {
