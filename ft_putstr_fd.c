@@ -6,16 +6,16 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:51:14 by hlongin           #+#    #+#             */
-/*   Updated: 2025/04/22 17:49:49 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:46:14 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "ft_printf.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[i])

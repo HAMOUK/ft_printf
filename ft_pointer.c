@@ -6,18 +6,17 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:21:52 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/22 17:01:42 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:55:57 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft/libft.h"
 #include "ft_printf.h"
 #include <stdarg.h>
-#include "../libft/libft.h"
-
 
 int	ft_ptrlen(unsigned long n)
 {
-	int     len;
+	int	len;
 
 	len = 1;
 	while (n >= 16)
@@ -38,25 +37,25 @@ void	ft_put_ptr(unsigned long n)
 	ft_putchar_fd(base[n % 16], 1);
 }
 
-int ft_pointer(va_list *args)
+int	ft_pointer(va_list *args)
 {
-    void *ptr;
-    unsigned long addr;
-    int len;
+	unsigned long	addr;
+	void			*ptr;
+	int				len;
 
-    ptr = va_arg(*args, void *);
-    addr = (unsigned long)ptr;
-    write(1, "0x", 2);
-    len = 2;
-    if (addr == 0)
-    {
-        ft_putchar_fd('0', 1);
-        len += 1;
-    }
-    else
-    {
-        ft_put_ptr(addr);
-        len += ft_ptrlen(addr);
-    }
-    return (len);
+	ptr = va_arg(*args, void *);
+	addr = (unsigned long)ptr;
+	len = 2;
+	if (addr == 0)
+	{
+		ft_putstr_fd("(nil)", 1);
+		return (5);
+	}
+	else
+	{
+		write(1, "0x", 2);
+		ft_put_ptr(addr);
+		len += ft_ptrlen(addr);
+	}
+	return (len);
 }

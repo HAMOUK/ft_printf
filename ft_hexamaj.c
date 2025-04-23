@@ -6,7 +6,7 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:20:20 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/22 17:18:43 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:45:55 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	ft_hexamaj(unsigned int nbr)
 	ft_putchar_fd(base[nbr % 16], 1);
 }
 
-int handle_hexamaj(va_list *args)
+int	handle_hexamaj(va_list *args)
 {
-    unsigned int nbr;
+	unsigned int	nbr;
 
-    nbr = va_arg(*args, unsigned int);
-    ft_hexamaj(nbr);
-    return (ft_hexalen(nbr));
+	nbr = va_arg(*args, unsigned int);
+	ft_hexamaj(nbr);
+	return (ft_hexalen(nbr));
 }

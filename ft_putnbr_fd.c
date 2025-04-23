@@ -6,12 +6,12 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:51:03 by hlongin           #+#    #+#             */
-/*   Updated: 2025/04/22 17:19:44 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:57:08 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <unistd.h>
-#include  "ft_printf.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -32,5 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }
-
-

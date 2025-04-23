@@ -6,12 +6,12 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:50:58 by hlongin           #+#    #+#             */
-/*   Updated: 2025/04/22 17:18:18 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:46:09 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "ft_printf.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

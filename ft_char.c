@@ -6,17 +6,17 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:22:58 by hugolongin        #+#    #+#             */
-/*   Updated: 2025/04/22 17:18:30 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:45:42 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_char(va_list *args)
+int	ft_char(va_list *args)
 {
-    char    c;
+	char	c;
 
-    c = (char)va_arg(*args, int);
-    ft_putchar_fd(c, 1);
-    return (1);
+	c = (char)va_arg(*args, int);
+	ft_putchar_fd(c, 1);
+	return (1);
 }

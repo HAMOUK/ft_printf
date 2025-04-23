@@ -6,13 +6,13 @@
 /*   By: hlongin <hlongin@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:51:43 by hlongin           #+#    #+#             */
-/*   Updated: 2025/04/22 17:48:24 by hlongin          ###   ########.fr       */
+/*   Updated: 2025/04/23 11:46:20 by hlongin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t 	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
